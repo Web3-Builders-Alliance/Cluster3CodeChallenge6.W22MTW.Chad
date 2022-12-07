@@ -83,6 +83,28 @@ describe("cw-streams Fullstack Test", () => {
     }).timeout(100000);
 
     //Coding challenge, add tests for the rest of the contract.
+    //Struct for cw20-base instantiation
+    /*pub struct InstantiateMsg {
+        pub name: String,
+        pub symbol: String,
+        pub decimals: u8,
+        pub initial_balances: Vec<Cw20Coin>,
+        pub mint: Option<MinterResponse>,
+        pub marketing: Option<InstantiateMarketingInfo>,
+    }*/
 
+    //Struct for cw20-streams instantiation
+    /*pub struct InstantiateMsg {
+        pub owner: Option<String>,
+        pub cw20_addr: String,
+    }*/
+
+    //Struct for cw20-streams create_stream
+    // REMEMBER you must use cw20's send execute message to create a stream!
+    /*CreateStream {
+        recipient: String,
+        start_time: u64,
+        end_time: u64,
+    }*/
 
 });
