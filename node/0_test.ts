@@ -8,7 +8,7 @@ import assert from "assert";
 const rpcEndpoint = "https://rpc.uni.juno.deuslabs.fi";
 
 //CODING CHALLENGE, add wasm files.
-const _wasm = fs.readFileSync("../artifacts/_.wasm");
+const _wasm = fs.readFileSync("../artifacts/cw20_base.wasm");
 
 const mnemonic =
     "test peanut elevator motor proud globe obtain gasp sad balance nature ladder";
@@ -43,6 +43,10 @@ describe("cw-streams Fullstack Test", () => {
         let wallet = await Secp256k1HdWallet.generate(12);
         console.log(wallet.mnemonic);
     });
+
+    xit("Get Address", async() => {
+        console.log(await getAddress(mnemonic));
+    }).timeout(200000);
 
     xit("Get Testnet Tokens", async () => {
         //let wallet = await Secp256k1HdWallet.fromMnemonic(mnemonic, { prefix: 'juno' });
